@@ -1,0 +1,53 @@
+Performing C++ SOURCE FILE Test HAVE_UINT128_T failed with the following output:
+Change Dir: /home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_76f26/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_76f26.dir/build.make CMakeFiles/cmTC_76f26.dir/build
+gmake[1]: Entering directory '/home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_76f26.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_UINT128_T  -fPIE -std=c++20 -o CMakeFiles/cmTC_76f26.dir/src.cxx.o -c /home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp/src.cxx
+/home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp/src.cxx:4:18: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint8_t’?
+    4 |             if ((uint128_t *) 0) return 0;
+      |                  ^~~~~~~~~
+      |                  uint8_t
+/home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp/src.cxx:4:29: error: expected primary-expression before ‘)’ token
+    4 |             if ((uint128_t *) 0) return 0;
+      |                             ^
+/home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp/src.cxx:4:30: error: expected ‘)’ before numeric constant
+    4 |             if ((uint128_t *) 0) return 0;
+      |                ~             ^~
+      |                              )
+/home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp/src.cxx:5:25: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint8_t’?
+    5 |             if (sizeof (uint128_t)) return 0;
+      |                         ^~~~~~~~~
+      |                         uint8_t
+gmake[1]: *** [CMakeFiles/cmTC_76f26.dir/build.make:78: CMakeFiles/cmTC_76f26.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_76f26/fast] Error 2
+
+
+Source file was:
+#include <stdint.h>
+       int main()
+         {
+            if ((uint128_t *) 0) return 0;
+            if (sizeof (uint128_t)) return 0;
+            return 1;
+         }
+Determining if the include file net/netmap_user.h exists failed with the following output:
+Change Dir: /home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_2b180/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2b180.dir/build.make CMakeFiles/cmTC_2b180.dir/build
+gmake[1]: Entering directory '/home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2b180.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fPIE -o CMakeFiles/cmTC_2b180.dir/CheckIncludeFile.c.o -c /home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: net/netmap_user.h: No such file or directory
+    1 | #include <net/netmap_user.h>
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_2b180.dir/build.make:78: CMakeFiles/cmTC_2b180.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/home/etftk/Downloads/ns-allinone-3.42/ns-3.42/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_2b180/fast] Error 2
+
+
+
